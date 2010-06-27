@@ -1,4 +1,5 @@
 ﻿using DAO;
+using DTO;
 namespace BUS
 {
     public class ThamSoBUS
@@ -11,7 +12,7 @@ namespace BUS
             return true;
         }
         // Kiểm tra nợ của một khách hàng (string) có thoả không
-        public static bool CheckNoLN ( string tenKH) {
+        public static bool CheckNoLN (string tenKH) {
             decimal no = KhachHangDAO.GetNo(tenKH);
             if (no < ThamSoDAO.GetNoLN() ) {
                 return true;
@@ -20,9 +21,16 @@ namespace BUS
         }
         // Lấy lượng tồn tối đa để nhập một cuốn sách
         public static bool CheckLTNN (string tenSach, int luongXuat) {
-            if ( (SachDAO.GetLuongTon(tenSach) - luongXuat) < ThamSoDAO.SoLuongTonNN())
-                return false;
-            return true;
+            var luongTon = (SachDAO.GetLuongTon(tenSach) - luongXuat);
+            return luongTon >= ThamSoDAO.SoLuongTonNN();
+        }
+        // Lấy tất cả các tham số
+        public static ThamSoDTO GetAll() {
+            return ThamSoDAO.GetAll();
+        }
+        // Update tất cả các tham số
+        public static void UpdateAll(ThamSoDTO thamSos) {
+            ThamSoDAO.UpdateAll(thamSos);
         }
     }
 }

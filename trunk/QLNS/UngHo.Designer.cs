@@ -31,6 +31,7 @@ namespace QLNS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UngHo));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt = new System.Windows.Forms.TextBox();
@@ -85,6 +86,9 @@ namespace QLNS
             this.Controls.Add(this.txt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(350, 160);
+            this.MinimumSize = new System.Drawing.Size(350, 160);
             this.Name = "UngHo";
             this.Text = "UngHo";
             this.ResumeLayout(false);
@@ -101,7 +105,7 @@ namespace QLNS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Cảm ơn các bạn đã ủng hộ " + txt.Text + @"[đơn vị] cho chương trình của chúng tôi!"+ Environment.NewLine + @"Tất cả giá trị sẽ được quy ra điểm cho chương trình chúng tôi :')",@"Cảm ơn!",MessageBoxButtons.OK);
+            MessageBox.Show(@"Cảm ơn các bạn đã ủng hộ " + txt.Text + @"[đơn vị] cho chương trình của chúng tôi!"+ Environment.NewLine + @"Tất cả giá trị sẽ được quy ra điểm cho chương trình.",@"Cảm ơn!",MessageBoxButtons.OK);
         }
     }
 }

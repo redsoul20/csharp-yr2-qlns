@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDonBanSach));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ngayLap = new System.Windows.Forms.DateTimePicker();
-            this.hoTen = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -43,6 +43,7 @@
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbHoTen = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +67,7 @@
             this.label2.Size = new System.Drawing.Size(112, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ngày lập hoá đơn:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.Label2Click);
             // 
             // ngayLap
             // 
@@ -74,14 +75,7 @@
             this.ngayLap.Name = "ngayLap";
             this.ngayLap.Size = new System.Drawing.Size(296, 21);
             this.ngayLap.TabIndex = 3;
-            this.ngayLap.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // hoTen
-            // 
-            this.hoTen.Location = new System.Drawing.Point(228, 19);
-            this.hoTen.Name = "hoTen";
-            this.hoTen.Size = new System.Drawing.Size(296, 21);
-            this.hoTen.TabIndex = 4;
+            this.ngayLap.ValueChanged += new System.EventHandler(this.DateTimePicker1ValueChanged);
             // 
             // button1
             // 
@@ -101,7 +95,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Bỏ";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2Click);
             // 
             // button3
             // 
@@ -111,7 +105,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Xoá bảng";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3Click);
             // 
             // PhieuNhapGrid
             // 
@@ -162,6 +156,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbHoTen);
             this.groupBox1.Controls.Add(this.PhieuNhapGrid);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label1);
@@ -169,7 +164,6 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.ngayLap);
-            this.groupBox1.Controls.Add(this.hoTen);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
@@ -177,6 +171,15 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "HOÁ ĐƠN BÁN SÁCH";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1Enter);
+            // 
+            // cbHoTen
+            // 
+            this.cbHoTen.FormattingEnabled = true;
+            this.cbHoTen.Location = new System.Drawing.Point(227, 23);
+            this.cbHoTen.Name = "cbHoTen";
+            this.cbHoTen.Size = new System.Drawing.Size(297, 21);
+            this.cbHoTen.TabIndex = 9;
             // 
             // HoaDonBanSach
             // 
@@ -184,8 +187,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 332);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(709, 376);
+            this.MinimumSize = new System.Drawing.Size(709, 376);
             this.Name = "HoaDonBanSach";
             this.Text = "HoaDonBanSach";
+            this.Load += new System.EventHandler(this.HoaDonBanSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PhieuNhapGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -198,7 +205,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker ngayLap;
-        private System.Windows.Forms.TextBox hoTen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -210,5 +216,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cbHoTen;
     }
 }

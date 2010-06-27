@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaoCaoCongNo));
             this.button1 = new System.Windows.Forms.Button();
             this.grid = new System.Windows.Forms.DataGridView();
             this.KhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,6 +127,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(494, 415);
+            this.MinimumSize = new System.Drawing.Size(494, 415);
             this.Name = "BaoCaoCongNo";
             this.Text = "BaoCaoCongNo";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

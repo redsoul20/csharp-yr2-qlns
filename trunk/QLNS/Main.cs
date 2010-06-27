@@ -63,5 +63,11 @@ namespace QLNS {
             var ungHo = new UngHo();
             ungHo.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var thayDoi = new ThayDoiThamSo();
+            thayDoi.Show();
+        }
     }
 }
