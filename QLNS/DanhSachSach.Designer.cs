@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachSach));
             this.Grid = new System.Windows.Forms.DataGridView();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -171,6 +172,9 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(576, 364);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(598, 408);
+            this.MinimumSize = new System.Drawing.Size(598, 408);
             this.Name = "DanhSachSach";
             this.Text = "DanhSachSach";
             this.Load += new System.EventHandler(this.DanhSachSach_Load);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaoCaoTon));
             this.button1 = new System.Windows.Forms.Button();
             this.grid = new System.Windows.Forms.DataGridView();
             this.Sach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -140,12 +141,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 374);
+            this.ClientSize = new System.Drawing.Size(472, 371);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtThang);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(494, 415);
+            this.MinimumSize = new System.Drawing.Size(494, 415);
             this.Name = "BaoCaoTon";
             this.Text = "BaoCaoTon";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

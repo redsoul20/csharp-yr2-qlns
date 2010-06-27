@@ -9,7 +9,9 @@ namespace BUS
         public static int Insert(PhieuXuatDTO phieuXuat) {
             return PhieuXuatDAO.Insert(phieuXuat);
         }
-
+        public static void UpdateThanhTien(int phieuXuatID, decimal tien) {
+            PhieuXuatDAO.UpdateThanhTien(phieuXuatID,tien);
+        }
         // Check PhieuXuat and return phieuXuatID if available
         public static int CheckPhieuXuat(int maKH,DateTime time) {
             return PhieuXuatDAO.CheckPhieuXuat(maKH, time);
